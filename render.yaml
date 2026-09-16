@@ -9,4 +9,4 @@ services:
       - key: PORT
         value: 8080
       - key: DATABASE_URL
-        sync: false # Set this manually in Render dashboard to your Neon DB string
+        value: "postgresql://neondb_owner:npg_kz3qb1KTDdCp@ep-gentle-cake-b44uj6he-pooler.c-6.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
