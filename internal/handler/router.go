@@ -18,6 +18,10 @@ func SetupRouter(hub *websocket.Hub) *gin.Engine {
 	config.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "Authorization"}
 	r.Use(cors.New(config))
 
+	r.GET("/health", func(c *gin.Context) {
+		c.JSON(200, gin.H{"status": "ok"})
+	})
+
 	r.GET("/windows", GetWindows)
 	r.POST("/windows", CreateWindow)
 	
