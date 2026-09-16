@@ -6,6 +6,9 @@ import (
 
 func GetAllWindows() ([]domain.Window, error) {
 	var windows []domain.Window
+	if DB == nil {
+		return windows, nil
+	}
 	result := DB.Find(&windows)
 	return windows, result.Error
 }

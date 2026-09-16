@@ -17,9 +17,13 @@ func main() {
 	repository.InitDB(cfg.DatabaseDSN)
 
 	// Seed only if db is empty (simplified check)
-	windows, _ := repository.GetAllWindows()
-	if len(windows) == 0 {
-		migrations.SeedDatabase()
+	if repository.DB != nil {
+		windows, _ := repository.GetAllWindows()
+		if len(windows) == 0 {
+			migrations.SeedDatabase()
+		}
+	} else {
+		log.Println("WARNING: Database is not connected. App will run but endpoints will fail.")
 	}
 
 	hub := websocket.NewHub()
