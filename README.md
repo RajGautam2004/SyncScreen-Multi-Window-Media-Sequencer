@@ -1,5 +1,7 @@
 # Multi-Window Media Sequencer
 
+https://syncscreen-multi-window-media-sequencer.onrender.com/
+
 A production-ready platform to synchronize and broadcast media playlists across multiple display windows. It features a deterministic time-based playback engine and a global sync override feature that flawlessly interrupts and resumes playback down to the exact millisecond.
 
 ---
