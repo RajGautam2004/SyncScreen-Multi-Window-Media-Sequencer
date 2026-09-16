@@ -9,7 +9,7 @@ const Dashboard = () => {
   
   // Determine WebSocket URL based on environment API URL
   const wsUrl = useMemo(() => {
-    const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const apiBase = import.meta.env.VITE_API_URL || 'https://syncscreen-multi-window-media-sequencer.onrender.com';
     return apiBase.replace('http://', 'ws://').replace('https://', 'wss://') + '/ws';
   }, []);
 
