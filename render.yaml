@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: media-sequencer-backend
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: DATABASE_URL
+        sync: false # Set this manually in Render dashboard to your Neon DB string
