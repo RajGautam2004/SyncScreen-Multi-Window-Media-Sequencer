@@ -191,7 +191,7 @@ Run the entire stack (Database, Backend, Frontend) with a single command:
 ```bash
 docker-compose up --build
 ```
-- Backend available at `localhost:8080`
+- Backend available at `localhost:8000`
 - Frontend available at `localhost:3000`
 
 ### Deployment
@@ -204,10 +204,10 @@ docker-compose up --build
 # Backend
 DATABASE_DSN="host=localhost user=postgres password=password dbname=media_sequencer port=5432 sslmode=disable"
 DATABASE_URL="postgres://user:pass@neon-host/dbname?sslmode=require" # For Production
-PORT=8080
+PORT=8000
 
 # Frontend
-VITE_API_URL="http://localhost:8080" # Set to backend URL in Vercel
+VITE_API_URL="http://localhost:8000" # Set to backend URL in Vercel
 ```
 
 ---

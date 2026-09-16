@@ -15,6 +15,6 @@ COPY --from=builder /app/main .
 COPY --from=builder /app/.env . 
 
 # Render injects PORT dynamically
-EXPOSE 8080
+EXPOSE 8000
 
 CMD ["./main"]
